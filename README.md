@@ -14,23 +14,19 @@ docker run -it -d --cpus=12 -m 24g -v /src:/tar registry.cn-hangzhou.aliyuncs.co
 docker exec -it [CONTAINER ID] bash
 ```
 
-## baseline更新 <br/>
-20230516: 调整main.py, evaluate.py，wm_core/embed.py, wm_core/extract.py. 方便参赛者需要并行处理视频以及更改水印生成的方式。
 
 ## 参赛规范 <br/>
-1) 工程开发目录需要在/workspace/wm_baseline/目录下, 启动脚本固定使用run.sh, 提交镜像中需使用baseline中main.py和evaluate.py. evaluate.py和attacks.py需保持和baseline一致. <br/>
-2) 请勿在水印提取阶段直接返回wms.npy中水印，应通过开发水印提取算法提取植入视频中的水印。如果在方案中直接读取返回wms.npy中水印，则成绩无效，且取消参赛资格.<br/>
-3) 提交方案中请合理安排日志打印输出内容.<br/>
-4) 平台提供了基于镜像地址提交镜像的方式, 将本地镜像推送至阿里云容器镜像仓库或者Dockerhub后, 设置为公开镜像, 在比赛平台提交页面中输入镜像地址. 由比赛平台拉取镜像运行, 运行结束即可在成绩页面查询评测结果. 推送至阿里云容器镜像仓库或者Dockerhub时, 镜像仓库名称尽量不关联上比赛相关的词语, 以免被检索从而泄漏.<br/>
-5) 运行镜像时，容器内任何网络不可用，请将依赖的软件、包在镜像中装好. <br/>
-6) 为了合理分配资源单次提交运行时间不能超过1个小时，超出后程序自动停止，结果将不被接受.<br/>
-7) 确保镜像中cp指令可用.<br/>
-8) Docker镜像大小请尽量勿超过8G, 上传镜像中请勿包含数据集, 以及程序生成的视频数据.<br/>
-9) PSNR作为客观指标用于筛选和过滤较差的视频质量。最终排名会引入主观评估，增加水印后若导致明显视频质量恶化则会取消排名或者向后调整排名.<br/>
+1) 工程开发目录需要在/workspace/AIGCDetectBaseline/目录下, 启动脚本固定使用run.sh, 提交镜像中需使用baseline中的main.py. main.py需保持和baseline一致. <br/>
+2) 提交方案中请合理安排日志打印输出内容.<br/>
+3) 平台提供了基于镜像地址提交镜像的方式, 将本地镜像推送至阿里云容器镜像仓库或者Dockerhub后, 设置为公开镜像, 在比赛平台提交页面中输入镜像地址. 由比赛平台拉取镜像运行, 运行结束即可在成绩页面查询评测结果. 推送至阿里云容器镜像仓库或者Dockerhub时, 镜像仓库名称尽量不关联上比赛相关的词语, 以免被检索从而泄漏.<br/>
+4) 运行镜像时，容器内任何网络不可用，请将依赖的软件、包在镜像中装好. <br/>
+5) 为了合理分配资源单次提交运行时间不能超过1个小时，超出后程序自动停止，结果将不被接受.<br/>
+6) 确保镜像中cp指令可用.<br/>
+7) Docker镜像大小请尽量勿超过16G, 上传镜像中请勿包含数据集.<br/>
 <br/>
 
 
-## 数据下载链接
+## 部分公开数据链接
 [百度云链接:](https://pan.baidu.com/s/1QuqDI6fk9jOQNGoIVH8Ozw) https://pan.baidu.com/s/1QuqDI6fk9jOQNGoIVH8Ozw  <br/>
 提取码: mgtv <br/>
 [Google Drive:](https://drive.google.com/file/d/1LzdC3T9JDn6WJuPaXzfa45j9anBIhlbJ/view?usp=sharing) https://drive.google.com/file/d/1LzdC3T9JDn6WJuPaXzfa45j9anBIhlbJ/view?usp=sharing  <br/>
@@ -56,10 +52,6 @@ $ docker push registry.cn-hangzhou.aliyuncs.com/xx1/xx2:[镜像版本号]
 ```
 5) 在比赛提交页面提交: registry.cn-hangzhou.aliyuncs.com/xx1/xx2:[镜像版本号].
 <br/>
-
-docker tag 2ef3130a213b registry.cn-hangzhou.aliyuncs.com/clg_test/clg_test2:v8
-docker push registry.cn-hangzhou.aliyuncs.com/clg_test/clg_test2:v8
-docker pull registry.cn-hangzhou.aliyuncs.com/clg_test/clg_test2:v8
 
 ## Reference <br/>
 This baseline is mainly inspired by [WisconsinAIVision/UniversalFakeDetect](https://github.com/WisconsinAIVision/UniversalFakeDetect).
