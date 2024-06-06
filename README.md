@@ -27,9 +27,11 @@ docker exec -it [CONTAINER ID] bash
 
 
 ## 部分公开数据链接
-[百度云链接:](https://pan.baidu.com/s/1QuqDI6fk9jOQNGoIVH8Ozw) https://pan.baidu.com/s/1QuqDI6fk9jOQNGoIVH8Ozw  <br/>
-提取码: mgtv <br/>
-[Google Drive:](https://drive.google.com/file/d/1LzdC3T9JDn6WJuPaXzfa45j9anBIhlbJ/view?usp=sharing) https://drive.google.com/file/d/1LzdC3T9JDn6WJuPaXzfa45j9anBIhlbJ/view?usp=sharing  <br/>
+参赛者使用开源数据集训练模型。<br/>
+开源训练数据集：<br/>
+CNNDetection: https://github.com/peterwang512/CNNDetection <br/>
+Sentry: https://github.com/Inf-imagine/Sentry <br/>
+参赛者可以使用其它开源数据集或者组织自己的训练数据 <br/>
 
 
 ## 资源配置：<br/>

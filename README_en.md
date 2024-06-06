@@ -26,9 +26,11 @@ docker exec -it [CONTAINER ID] bash
 
 
 ## Data Download
-[BaiduNetdisk:](https://pan.baidu.com/s/1QuqDI6fk9jOQNGoIVH8Ozw) https://pan.baidu.com/s/1QuqDI6fk9jOQNGoIVH8Ozw <br/>
-Code: mgtv <br/>
-[Google Drive:](https://drive.google.com/file/d/1LzdC3T9JDn6WJuPaXzfa45j9anBIhlbJ/view?usp=sharing) https://drive.google.com/file/d/1LzdC3T9JDn6WJuPaXzfa45j9anBIhlbJ/view?usp=sharing  <br/>
+Participants are allowed to use open-source datasets to train their models. <br/>
+Open-source training datasets: <br/>
+CNNDetection: https://github.com/peterwang512/CNNDetection <br/>
+Sentry: https://github.com/Inf-imagine/Sentry <br/>
+Participants may use other open-source datasets or organize their own training data. <br/>
 
 
 ## Computation Resources<br/>
