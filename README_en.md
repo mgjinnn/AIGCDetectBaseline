@@ -16,7 +16,7 @@ docker exec -it [CONTAINER ID] bash
 ```
 
 ## Challenge Specifications<br/>
-1) The project development directory needs to be in the /workspace/wm_baseline/ directory, the startup script always uses run.sh, and the main.py and evaluate.py in the baseline need to be used when submitting the Docker image.<br/>
+1) The project development directory needs to be in the /workspace/wm_baseline/ directory, the startup script always uses run.sh, and the main.py and evaluate.py in the baseline need to be used when submitting the Docker image. And the directory structure of the test data should remain consistent with the baseline.<br/>
 2) Please arrange the log printout content reasonably and output the key information.<br/>
 3) The challenge website provides a way to submit Docker images based on the image url address, and you should package the local code into an image submission. You can push it to the Aliyun Docker Hub or Dockerhub and submit the Docker image address on the submission page of the challenge platform. The challenge platform pulls the image to run, and after the computation is finished, you can check the evaluation results on the results page. Push to Aliyun Docker Hub or Dockerhub (it is recommended to use Aliyun Docker Hub, and the name of the Docker image should not be associated with challenge-related words as much as possible, so as not to be retrieved and leaked). <br/>
 4) When running the image, any network in the container is unavailable, please install the dependent software and packages in the image.<br/>

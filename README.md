@@ -17,7 +17,7 @@ docker exec -it [CONTAINER ID] bash
 
 
 ## 参赛规范 <br/>
-1) 工程开发目录需要在/workspace/AIGCDetectBaseline/目录下, 启动脚本固定使用run.sh, 提交镜像中需使用baseline中的main.py. main.py需保持和baseline一致. <br/>
+1) 工程开发目录需要在/workspace/AIGCDetectBaseline/目录下, 启动脚本固定使用run.sh, 提交镜像中需使用baseline中的main.py, main.py需保持和baseline一致, 测试数据目录结构保持与baseline一致. <br/>
 2) 提交方案中请合理安排日志打印输出内容.<br/>
 3) 平台提供了基于镜像地址提交镜像的方式, 将本地镜像推送至阿里云容器镜像仓库或者Dockerhub后, 设置为公开镜像, 在比赛平台提交页面中输入镜像地址. 由比赛平台拉取镜像运行, 运行结束即可在成绩页面查询评测结果. 推送至阿里云容器镜像仓库或者Dockerhub时, 镜像仓库名称尽量不关联上比赛相关的词语, 以免被检索从而泄漏.<br/>
 4) 运行镜像时，容器内任何网络不可用，请将依赖的软件、包在镜像中装好. <br/>
