@@ -9,7 +9,7 @@ bash run.sh
 
 docker: <br/>
 ```bash
-docker pull registry.cn-hangzhou.aliyuncs.com/mg_test/wm_baseline:v1
+docker pull registry.cn-hangzhou.aliyuncs.com/clg_test/aigc_det:1.0
 docker run -it -d --cpus=12 -m 24g -v /src:/tar registry.cn-hangzhou.aliyuncs.com/clg_test/aigc_det:1.0
 docker exec -it [CONTAINER ID] bash
 ```
