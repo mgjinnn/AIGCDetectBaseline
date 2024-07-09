@@ -56,6 +56,22 @@ $ docker push registry.cn-hangzhou.aliyuncs.com/xx1/xx2:[镜像版本号]
 5) 在比赛提交页面提交: registry.cn-hangzhou.aliyuncs.com/xx1/xx2:[镜像版本号].
 <br/>
 
+## FAQ <br/>
+1) 镜像选择. <br/>
+建议选择阿里云，docker hub可能会因网络原因无法拉取。
+2) 镜像拉取失败.<br/>
+1)) 私密镜像未输入阿里云账户密码;
+2)) 阿里云账户密码输入错误;
+3)) 阿里云地址有误;
+3) 运行失败原因.<br/>
+1)) 网络因素;
+2)) 超出硬件限制条件，比如batch太大导致内存，显存，shm溢出等;
+3)) 开发路径有误;
+4)) 模型遗漏等；
+4) 审核中状态. <br/>
+分数比较靠前的情况下, 可能偶尔触发审核中状态。
+<br/>
+
 ## Reference <br/>
 This baseline is mainly inspired by [WisconsinAIVision/UniversalFakeDetect](https://github.com/WisconsinAIVision/UniversalFakeDetect).
 <br/>
